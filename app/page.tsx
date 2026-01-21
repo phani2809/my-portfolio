@@ -4,6 +4,10 @@ import { AboutSection } from "@/components/portfolio/about-section";
 import { SkillsSection } from "@/components/portfolio/skills-section";
 import { ProjectsSection } from "@/components/portfolio/projects-section";
 import { ExperienceSection } from "@/components/portfolio/experience-section";
+import { CertificationsSection } from "@/components/portfolio/certifications-section";
+import { HackathonsSection } from "@/components/portfolio/hackathons-section";
+import { AchievementsSection } from "@/components/portfolio/achievements-section";
+import { RolesSection } from "@/components/portfolio/roles-section";
 import { ContactSection } from "@/components/portfolio/contact-section";
 import { Footer } from "@/components/portfolio/footer";
 
@@ -39,6 +43,18 @@ export default function HomePage() {
 
       {/* Experience Section - Work history timeline */}
       <ExperienceSection />
+
+      {/* Certifications Section - Professional certifications */}
+      <CertificationsSection />
+
+      {/* Hackathons & Workshops - Events and projects */}
+      <HackathonsSection />
+
+      {/* Achievements - Recognitions and awards */}
+      <AchievementsSection />
+
+      {/* Roles & Responsibilities */}
+      <RolesSection />
 
       {/* Contact Section - Contact form and info */}
       <ContactSection />

@@ -108,3 +108,11 @@
 .animate-fade-in {
   animation: fade-in 0.8s ease-out forwards;
 }
+
+/* ElectricBorder stacking: ensure content stays above the canvas */
+.electric-border .eb-canvas-container {
+  z-index: 0 !important;
+}
+.electric-border .eb-content {
+  z-index: 1 !important;
+}

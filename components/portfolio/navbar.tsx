@@ -65,7 +65,7 @@ export function Navbar() {
             onClick={() => scrollToSection("#home")}
             className="text-xl font-bold text-primary transition-colors hover:text-primary/80"
           >
-            {"<JD />"} {/* Replace with your initials or logo */}
+            {"Yanna Phani Srinath"} {/* Replace with your initials or logo */}
           </button>
 
           {/* Desktop Navigation */}

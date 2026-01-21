@@ -6,6 +6,10 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  turbopack: {
+    // Explicitly set the workspace root to avoid incorrect inference
+    root: '.',
+  },
  
 }
 

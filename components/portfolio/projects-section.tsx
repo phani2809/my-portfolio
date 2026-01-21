@@ -3,69 +3,68 @@
 import { useEffect, useRef, useState } from "react";
 import { ExternalLink, Folder, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
+// import ElectricBorder from "@/components/ElectricBorder";
 
-// ============================================
-// PLACEHOLDER DATA - Replace with your projects
-// ============================================
 const projectsData = [
   {
-    title: "E-Commerce Platform",
+    title: "QuakeConnect",
     description:
-      "A full-stack e-commerce application with product management, cart functionality, and payment integration using Stripe.",
-    image: "/placeholder-project-1.jpg",
-    techStack: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Stripe"],
-    githubUrl: "https://github.com/yourusername/project1",
-    liveUrl: "https://project1.vercel.app",
+      "An application that connects different citizens, NGOs, and government entities. Features include historical earthquake data analysis, earthquake prediction based on historical patterns, and realtime alert systems. The platform facilitates communication and coordination during seismic events.",
+    image: "/quakeconnect.png",
+    techStack: ["React.js", "Tailwind CSS","TypeScript", "Node.js", "Express.js", "MangoDB"],
+    githubUrl: "https://github.com/phani2809/QuakeConnect.git",
+    liveUrl: "#",
     featured: true,
   },
   {
-    title: "Task Management App",
+    title: "IPO Web Application",
     description:
-      "A collaborative task management tool with real-time updates, drag-and-drop functionality, and team workspaces.",
-    image: "/placeholder-project-2.jpg",
-    techStack: ["React", "Node.js", "Socket.io", "MongoDB", "Tailwind CSS"],
-    githubUrl: "https://github.com/yourusername/project2",
-    liveUrl: "https://project2.vercel.app",
+      "Built a full-stack IPO information platform using the MERN stack. Developed a RESTful API to manage and serve IPO data including company details, price band, issue size, listing status, and real-time market updates. Integrated features like downloadable RHP/DRHP PDFs and dynamic UI for enhanced user experience.",
+    image: "/ipo-web.png",
+    techStack: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
+    githubUrl: "https://github.com/phani2809/IPO_Web_Application.git",
+    liveUrl: "#",
     featured: true,
   },
   {
     title: "AI Chat Application",
     description:
       "An AI-powered chat application that uses OpenAI's GPT API to provide intelligent responses and conversation history.",
-    image: "/placeholder-project-3.jpg",
-    techStack: ["Next.js", "OpenAI API", "Vercel AI SDK", "Supabase"],
-    githubUrl: "https://github.com/yourusername/project3",
-    liveUrl: "https://project3.vercel.app",
+    image: "/Chatbot.jpg",
+    techStack: ["React.js", "OpenAI API", "Python", "Streamlit"],
+    githubUrl: "https://github.com/phani2809/chatbot.git",
+    liveUrl: "#",
     featured: true,
   },
   {
-    title: "Weather Dashboard",
+    title: "MediCloud",
     description:
-      "A weather dashboard that displays real-time weather data with interactive charts and location-based forecasts.",
-    image: "/placeholder-project-4.jpg",
-    techStack: ["React", "Chart.js", "Weather API", "Geolocation"],
-    githubUrl: "https://github.com/yourusername/project4",
-    liveUrl: "https://project4.vercel.app",
+      "A Full-stack Medicine Booking application that allows users to book medicines from their preferred pharmacy stores. The platform provides nearby pharmacy locations and lab test booking from home options, making healthcare more accessible and convenient.",
+    image: "/medicloud.png",
+    techStack: ["HTML", "CSS", "JavaScript", "Bootstrap", "Node.js", "Express.js", "MongoDB"],
+    githubUrl: "https://github.com/phani2809/MediCloud.git",
+    liveUrl: "#",
     featured: false,
   },
   {
-    title: "Portfolio Website",
+    title: "URL Shortener",
     description:
-      "A personal portfolio website built with modern technologies featuring smooth animations and responsive design.",
-    image: "/placeholder-project-5.jpg",
-    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    githubUrl: "https://github.com/yourusername/project5",
-    liveUrl: "https://project5.vercel.app",
+      "A simple and efficient URL shortening service with a clean and intuitive user interface.",
+    image: "/url-short.png",
+    techStack: ["React.js", "TypeScript", "Tailwind CSS", "Node.js", "Express.js", "MongoDB"],
+    githubUrl: "https://github.com/phani2809/url-project.git",
+    liveUrl: "https://urlproject123.netlify.app/",
     featured: false,
   },
   {
-    title: "Blog Platform",
+    title: "Cart and Cuisine",
     description:
-      "A full-featured blog platform with markdown support, categories, comments, and admin dashboard.",
-    image: "/placeholder-project-6.jpg",
-    techStack: ["Next.js", "MDX", "Prisma", "NextAuth"],
-    githubUrl: "https://github.com/yourusername/project6",
-    liveUrl: "https://project6.vercel.app",
+      "A comprehensive e-commerce platform for food and grocery shopping, featuring user-friendly navigation, secure payment options, and real-time order tracking.",
+    image: "/cnc.png",
+    techStack: ["HTML", "CSS", "JavaScript", "Node","SQL"],
+    githubUrl: "https://github.com/phani2809/cart-and-cuisine.git",
+    liveUrl: "#",
     featured: false,
   },
 ];
@@ -79,6 +78,7 @@ function ProjectCard({
 }) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [imgFailed, setImgFailed] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -98,20 +98,32 @@ function ProjectCard({
   }, []);
 
   return (
-    <div
-      ref={cardRef}
-      className={`group relative overflow-hidden rounded-xl border border-border bg-card transition-all duration-700 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 ${
-        isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-      }`}
-      style={{ transitionDelay: `${index * 100}ms` }}
-    >
-      {/* Project Image Placeholder */}
-      <div className="relative h-48 overflow-hidden bg-secondary">
-        <div className="flex h-full items-center justify-center">
-          <Folder className="h-16 w-16 text-muted-foreground/50" />
-        </div>
+      <div
+        ref={cardRef}
+        className={`group relative overflow-hidden rounded-xl border border-border bg-card transition-all duration-700 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 ${
+          isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+        }`}
+        style={{ transitionDelay: `${index * 100}ms` }}
+      >
+      {/* Project Image */}
+      <div className="relative h-55 overflow-hidden bg-secondary">
+        {!imgFailed ? (
+          <Image
+            src={project.image}
+            alt={`${project.title} preview`}
+            fill
+            sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw"
+            className="object-cover transition-transform duration-700 group-hover:scale-105"
+            onError={() => setImgFailed(true)}
+            priority={project.featured}
+          />
+        ) : (
+          <div className="flex h-full items-center justify-center">
+            <Folder className="h-16 w-16 text-muted-foreground/50" />
+          </div>
+        )}
         {/* Overlay on hover */}
-        <div className="absolute inset-0 flex items-center justify-center gap-4 bg-background/90 opacity-0 transition-opacity group-hover:opacity-100">
+        <div className="absolute inset-0 z-10 flex items-center justify-center gap-4 bg-background/90 opacity-0 transition-opacity group-hover:opacity-100">
           <Button size="sm" variant="outline" asChild>
             <a
               href={project.githubUrl}
@@ -164,7 +176,7 @@ function ProjectCard({
           ))}
         </div>
       </div>
-    </div>
+      </div>
   );
 }
 
@@ -223,7 +235,7 @@ export function ProjectsSection() {
         >
           <Button variant="outline" size="lg" asChild>
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/phani2809"
               target="_blank"
               rel="noopener noreferrer"
             >

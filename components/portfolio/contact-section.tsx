@@ -12,23 +12,23 @@ import { Textarea } from "@/components/ui/textarea";
 // PLACEHOLDER DATA - Replace with your info
 // ============================================
 const contactData = {
-  email: "johndoe@email.com",
-  phone: "+1 (555) 123-4567",
-  location: "San Francisco, CA",
+  email: "yannaphanisrinathreddy@gmail.com",
+  phone: "+91 7013229247",
+  location: "Guntur, Andhra Pradesh, India",
   socials: [
     {
       name: "GitHub",
-      url: "https://github.com/yourusername",
+      url: "https://github.com/phani2809",
       icon: Github,
     },
     {
       name: "LinkedIn",
-      url: "https://linkedin.com/in/yourusername",
+      url: "http://www.linkedin.com/in/yanna-phani-srinath-reddy-b590a826a",
       icon: Linkedin,
     },
     {
       name: "Email",
-      url: "mailto:johndoe@email.com",
+      url: "mailto:yannaphanisrinathreddy@gmail.com",
       icon: Mail,
     },
   ],

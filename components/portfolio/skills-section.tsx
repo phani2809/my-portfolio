@@ -10,17 +10,14 @@ import {
   Wrench,
 } from "lucide-react";
 
-// ============================================
-// PLACEHOLDER DATA - Replace with your skills
-// ============================================
 const skillsData = {
   frontend: {
     title: "Frontend",
     icon: Layout,
     skills: [
       { name: "React.js", level: 90 },
-      { name: "Next.js", level: 85 },
-      { name: "TypeScript", level: 85 },
+      { name: "Next.js", level: 75 },
+      { name: "TypeScript", level: 75 },
       { name: "Tailwind CSS", level: 90 },
       { name: "HTML/CSS", level: 95 },
       { name: "JavaScript", level: 90 },
@@ -44,7 +41,7 @@ const skillsData = {
       { name: "MongoDB", level: 80 },
       { name: "PostgreSQL", level: 75 },
       { name: "MySQL", level: 75 },
-      { name: "Redis", level: 65 },
+      { name: "SQL", level: 95 },
     ],
   },
   tools: {
@@ -52,11 +49,12 @@ const skillsData = {
     icon: Wrench,
     skills: [
       { name: "Git/GitHub", level: 90 },
-      { name: "Docker", level: 70 },
-      { name: "AWS", level: 65 },
+      { name: "Word", level: 70 },
+      { name: "Excel", level: 70 },
+      { name: "Power BI", level: 65 },
       { name: "VS Code", level: 95 },
       { name: "Figma", level: 75 },
-      { name: "Linux", level: 70 },
+      { name: "Canva", level: 70 },
     ],
   },
 };

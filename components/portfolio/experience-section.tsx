@@ -2,71 +2,52 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Briefcase, Calendar, ExternalLink } from "lucide-react";
-
-// ============================================
-// PLACEHOLDER DATA - Replace with your experience
-// ============================================
 const experienceData = [
   {
-    role: "Senior Frontend Developer",
-    company: "Tech Company Inc.",
-    companyUrl: "https://techcompany.com",
-    duration: "Jan 2024 - Present",
-    type: "Full-time",
+    role: "Software Developer Intern and Co-Team Lead",
+    company: "BlueStock Fintech.",
+    companyUrl: "https://bluestock.in/",
+    duration: "May 2025 - July 2025",
+    type: "Internship",
     location: "Remote",
     responsibilities: [
       "Lead the development of the main product dashboard using React and TypeScript",
       "Implemented design system and component library used across 5+ products",
-      "Mentored 3 junior developers and conducted code reviews",
+      "Mentored my team and conducted code reviews",
       "Reduced page load time by 40% through performance optimizations",
     ],
-    technologies: ["React", "TypeScript", "Next.js", "GraphQL", "Tailwind CSS"],
+    technologies: ["React", "TypeScript", "Node.js", "Express.js", "Tailwind CSS","Restful APIs","MangoDB"],
   },
   {
-    role: "Full Stack Developer",
-    company: "Startup Labs",
-    companyUrl: "https://startuplabs.com",
-    duration: "Jun 2022 - Dec 2023",
-    type: "Full-time",
-    location: "San Francisco, CA",
-    responsibilities: [
-      "Built and maintained RESTful APIs serving 100K+ daily requests",
-      "Developed responsive web applications using React and Node.js",
-      "Integrated third-party services including Stripe, AWS, and Twilio",
-      "Collaborated with design team to implement pixel-perfect UIs",
-    ],
-    technologies: ["Node.js", "React", "PostgreSQL", "AWS", "Docker"],
-  },
-  {
-    role: "Frontend Developer Intern",
-    company: "Digital Agency",
-    companyUrl: "https://digitalagency.com",
-    duration: "Jan 2022 - May 2022",
+    role: "Web Developer Intern",
+    company: "Elevate Labs",
+    companyUrl: "https://elevatelabs.in/",
+    duration: "July 2025 - Sept 2025",
     type: "Internship",
-    location: "New York, NY",
-    responsibilities: [
-      "Assisted in building client websites using React and CSS",
-      "Participated in daily standups and sprint planning",
-      "Fixed bugs and implemented new features under supervision",
-      "Learned agile methodologies and collaborative development practices",
-    ],
-    technologies: ["React", "JavaScript", "SCSS", "Git", "Figma"],
-  },
-  {
-    role: "Freelance Web Developer",
-    company: "Self-Employed",
-    companyUrl: "#",
-    duration: "Jun 2021 - Dec 2021",
-    type: "Freelance",
     location: "Remote",
     responsibilities: [
-      "Designed and developed websites for small businesses",
-      "Created custom WordPress themes and plugins",
-      "Managed client relationships and project timelines",
-      "Delivered 10+ projects on time and within budget",
+      "Designed user interfaces using Figma",
+      "Developed responsive web applications using HTML, CSS and JavaScript",
+      "Collaborated with design team to implement pixel-perfect UIs",
+      "Built scalable and user-friendly applications"
     ],
-    technologies: ["WordPress", "PHP", "JavaScript", "HTML/CSS"],
+    technologies: ["HTML", "CSS", "JavaScript", "Node.js", "Express.js", "React", "MongoDB" ],
   },
+  {
+    role: "Draft Officer",
+    company: "Institution Innovation Council (IIC), VVIT",
+    companyUrl: "https://iic.mic.gov.in/",
+    duration: "Sep 2024 - Jan 2026",
+    type: "Council Role",
+    location: "Nambur, Andhra Pradesh",
+    responsibilities: [
+      "Creating and editing official documents and drafts",
+      "Maintaining records and filing systems",
+      "Handling the official website of the Institution Innovation Council",
+      "Coordinating communication between different departments",
+    ],
+    technologies: ["Word", "Excel", "Google Forms", "Google Sheets", "Website Handling"],
+  }
 ];
 
 function TimelineItem({
