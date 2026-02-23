@@ -4,6 +4,20 @@ import { useEffect, useRef, useState } from "react";
 import { Briefcase, Calendar, ExternalLink } from "lucide-react";
 const experienceData = [
   {
+    role: "LLM Post Training Intern",
+    company: "ETHARA AI.",
+    companyUrl: "https://www.ethara.ai/",
+    duration: "Jan 2026 - Present",
+    type: "Internship",
+    location: "Remote",
+    responsibilities: [
+      "Works on some of the LLM models",
+      "Train the models and increase their efficiency",
+      "Mentored my team and conducted internal reviews",
+          ],
+    technologies: ["AI", "Prompting", "TeamWork", "Collaboration"],
+  },
+  {
     role: "Software Developer Intern and Co-Team Lead",
     company: "BlueStock Fintech.",
     companyUrl: "https://bluestock.in/",
